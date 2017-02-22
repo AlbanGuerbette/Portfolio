@@ -1,0 +1,8 @@
+# ignore .vscode/
+.vscode/
+
+# ignore all files in the public/ directory
+public/
+
+# ignore node_modules
+node_modules/
