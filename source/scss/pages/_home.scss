@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+/*=============================================
+=            Layout            =
+=============================================*/
+
+
+.wrapper {
+  height: 100vh;
+  padding: 1vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.presentation {
+  width: 50vw;
+  height: 35vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-arrow {
+  align-self: center;
+}
+
+
+/*=====  End of Layout  ======*/
+
+
+/*=============================================
+=            Styles            =
+=============================================*/
+body {
+  background-color: $brand-color;
+}
+
+.wrapper {
+  border: 10px solid $brand-color-light;
+}
+
+.nav--primary,
+.logo {
+  font-family: $code-font-stack;
+}
+
+.header {}
+
+.presentation {
+    border: 10px solid $brand-color-light;
+    padding: 10px;
+}
+
+.bottom-arrow {
+  fill: $brand-color-secondary-light;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+/*=====  End of Styles  ======*/
