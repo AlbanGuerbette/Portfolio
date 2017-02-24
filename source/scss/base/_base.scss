@@ -18,6 +18,18 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+/**
+ * 1. Prevent horizontal scrolling.
+ */
+body {
+  color: $text-color;
+  font: 1em / 1.5 $text-font-stack;
+  overflow-x: hidden; /* 1 */
+
+  @include media('>=medium') {
+    font-size: 1.25em;
+  }
+}
 
 /**
  * Basic styles for links
