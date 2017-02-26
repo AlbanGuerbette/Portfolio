@@ -28,26 +28,50 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <h1 class="logo">LBN</h1>
-      <nav>
-        <h1 class="nav--primary">MENU</h1>
-      </nav>
-    </header>
-    <div class="presentation">
-      <h1>ALBAN GUERBETTE</h1>
-      <h2>Développeur front-end</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eaque fugiat molestias voluptatem, quibusdam laboriosam
-        odio illum voluptatum ut, aliquid ab quae inventore doloribus reiciendis sit non beatae vero laudantium.
-      </p>
+<div class="wrapper">
+    <div class="section section__home">
+      <header class="header">
+        <h1 class="logo">LBN</h1>
+        <nav>
+          <h1 class="nav--primary">MENU</h1>
+        </nav>
+      </header>
+      <div class="presentation">
+        <h1>ALBAN GUERBETTE</h1>
+        <h2>Développeur front-end</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eaque fugiat molestias voluptatem, quibusdam laboriosam
+          odio illum voluptatum ut, aliquid ab quae inventore doloribus reiciendis sit non beatae vero laudantium.
+        </p>
+      </div>
+      <svg version="1.1" class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" width="10px" height="20px" viewBox="0 0 10 20" style="enable-background:new 0 0 10 20;" xml:space="preserve">
+        <polygon class="arrow" points="1,16.3 3.9,19.1 3.9,19.1 4.5,19.7 4.5,19.7 4.5,19.7 5.1,19.1 8,16.4 7.4,15.8 5,18.1 5,0.3 4,0.3 4,18 1.6,15.7"
+        />
+      </svg>
     </div>
-    <svg version="1.1" id="Ebene_2_1_" class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px" y="0px" width="10px" height="20px" viewBox="0 0 10 20" style="enable-background:new 0 0 10 20;" xml:space="preserve">
-      <polygon points="1,16.3 3.9,19.1 3.9,19.1 4.5,19.7 4.5,19.7 4.5,19.7 5.1,19.1 8,16.4 7.4,15.8 5,18.1 5,0.3 4,0.3 4,18 1.6,15.7
-	" />
-    </svg>
+  </div>
+  <div class="section section__projets"></div>
+  <div class="section section__contact">
+    <form method="" action="">
+      <p>
+        <label class="label contact--label" for="firstname">Prénom</label><input class="input contact--input" type="text"
+          name="firstname" id="firstname" required/>
+      </p>
+      <p>
+        <label class="label contact--label" for="lastname">Nom</label><input class="input contact--input" type="text" name="lastname"
+          id="lastname" required/>
+      </p>
+      <p>
+        <label class="label contact--label" for="email">Email</label><input class="input contact--input" type="email" name="email"
+          id="email" required/>
+      </p>
+      <p>
+        <label class="label contact--label" for="message">Message</label><textarea class="input contact--input" name="message"
+          id="message" cols="30" rows="5"></textarea>
+      </p>
+      <input type="submit" class="btn" />
+    </form>
   </div>
 </body>
 
