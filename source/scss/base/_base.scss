@@ -23,12 +23,16 @@ html {
  */
 body {
   color: $text-color;
-  font: 1em / 1.5 $text-font-stack;
+  font: 300 1em / 1.5 $text-font-stack;
   overflow-x: hidden; /* 1 */
 
   @include media('>=medium') {
     font-size: 1.25em;
   }
+    @include media('>=large') {
+    font-size: 1.5em;
+  }
+
 }
 
 /**
