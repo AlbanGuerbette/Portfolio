@@ -35,15 +35,24 @@
 .bottom-arrow {
   align-self: center;
 }
+.section__projets {
 
-
+}
+.section__contact {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
 /*=====  End of Layout  ======*/
 
 
 /*=============================================
 =            Styles            =
 =============================================*/
-
+::selection {
+  background-color: $brand-color-secondary;
+  color: $light-grey;
+}
 body {
   background-color: $light-grey;
 }
@@ -74,6 +83,13 @@ body {
     cursor: pointer;
   }
 }
+.section__projets {
+    background-color: $brand-color-light;
 
+}
+
+.section__contact {
+  background-color: $brand-color-secondary-light;
+}
 
 /*=====  End of Styles  ======*/
