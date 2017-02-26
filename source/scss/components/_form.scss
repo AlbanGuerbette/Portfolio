@@ -1,18 +1,60 @@
-.label {
- text-transform: uppercase;
- font-size: .8em;
+.form {
+  width: 800px;
+  max-width: 100%;
 }
 
-.input:not([type="submit"]) {
-  resize: none;
+.input__wrapper {
+  position: relative;
+  margin-bottom: 2em;
+  top: 0;
+}
+
+.contact__label {
+  display: none;
+}
+
+.styled__label {
+  text-transform: uppercase;
+  position: absolute;
+  top: -0.2em;
+  transition: all .25s ease-in-out 0ms;
+  &:after {
+    display: inline-block;
+    content: attr(data-text);
+  }
+}
+
+.contact__input {
   @include on-event(self) {
-    background-color: $light-grey;
-    border: 0;
-    border-bottom:1px solid $brand-color;
-  }
-  @include on-event {
-    box-shadow:0 ;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $brand-color;
     outline: none;
-    border-bottom:1px solid $brand-color-secondary;
   }
+  width: 100%;
+  display: block;
+  font-size: 25px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: $brand-color;
+  border-radius: 0;
+}
+
+.contact__input:focus {
+  transition: border .25s ease-in-out;
+}
+
+textarea {
+  height: 3em;
+  resize: none;
+}
+
+
+/* Instead of using a adjacent sibling selector, use general sibling selector */
+
+.contact__input:focus~.styled__label,
+.inputNotEmpty .styled__label {
+  top: -1.4em;
+  font-size: 1rem;
+  color: $brand-color;
 }

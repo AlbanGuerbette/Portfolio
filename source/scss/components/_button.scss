@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn {
+  border-radius: 0;
+  border: 1px solid $brand-color;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.btn--primary {
+  color: $brand-color-secondary-light;
+  background-color: $brand-color;
+}
