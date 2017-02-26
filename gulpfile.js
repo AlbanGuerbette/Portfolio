@@ -34,9 +34,7 @@ gulp.task('styles', function () {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('public/assets/css/'))
     .pipe(rename({suffix: '.min'}))
-    //.pipe(sourcemaps.init())
     .pipe(cleanCSS())
-    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/css/'))
     .pipe(browserSync.reload({stream: true}))
 });
