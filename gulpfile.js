@@ -5,7 +5,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
-var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 
