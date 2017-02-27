@@ -9,11 +9,17 @@
 .section {
   height: 100vh;
 }
+.section:not(:first-child) {
+    padding: 1em;
+}
 
 .section__home {
+  @include media('>large'){
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  }
 }
 
 .header {
@@ -47,6 +53,7 @@
 .project__row {
   display: flex;
   flex-direction: column;
+  margin: 1em 0;
   @include media('>large') {
     flex-direction: row;
     justify-content: space-between;
@@ -61,7 +68,7 @@
 
 .project__image--laptop {
   max-width: 100%;
-  @include media('<large') {
+  @include media('<=large') {
     height: auto;
     align-self: center;
   }
@@ -69,12 +76,24 @@
 
 .project__image--iphone {
   max-width: 100%;
-  @include media('<large') {
+  @include media('<=large') {
     height: auto;
     align-self: center;
   }
 }
-
+.section__fcc {
+  display: none;
+  @include media('>large') {
+    height: auto;
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.codepen__wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 .section__contact {
   display: flex;
   flex-direction: column;
