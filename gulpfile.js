@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('browser-sync', function () {
   browserSync({
@@ -55,8 +56,16 @@ gulp.task('scripts', function () {
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('default', ['browser-sync'], function () {
+gulp.task('images', function () {
+    gulp.src('source/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('public/assets/img'))
+        .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('default', ['browser-sync','styles','scripts','images'], function () {
   gulp.watch("source/scss/**/*.scss", ['styles']);
   gulp.watch("source/js/**/*.js", ['scripts']);
+  gulp.watch("source/img/**/*", ['images']);
   gulp.watch("*.html", ['bs-reload']);
 });
