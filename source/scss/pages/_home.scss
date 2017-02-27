@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .header {
@@ -35,24 +34,66 @@
 .bottom-arrow {
   align-self: center;
 }
-.section__projets {
 
+.section__projets {
+  height: auto;
 }
+
+.projet__item__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.project__row {
+  display: flex;
+  flex-direction: column;
+  @include media('>large') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.project__row:nth-child(even) {
+  @include media('>large') {
+    flex-direction: row-reverse;
+  }
+}
+
+.project__image--laptop {
+  max-width: 100%;
+  @include media('<large') {
+    height: auto;
+    align-self: center;
+  }
+}
+
+.project__image--iphone {
+  max-width: 100%;
+  @include media('<large') {
+    height: auto;
+    align-self: center;
+  }
+}
+
 .section__contact {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
 /*=====  End of Layout  ======*/
 
 
 /*=============================================
 =            Styles            =
 =============================================*/
+
 ::selection {
   background-color: $brand-color-secondary;
   color: $light-grey;
 }
+
 body {
   background-color: $light-grey;
 }
@@ -71,7 +112,6 @@ body {
 }
 
 .presentation {
-
   h1 {
     letter-spacing: 1.5px;
   }
@@ -83,13 +123,14 @@ body {
     cursor: pointer;
   }
 }
-.section__projets {
-    background-color: $brand-color-light;
 
+.section__projets {
+  background-color: $brand-color-light;
 }
 
 .section__contact {
   background-color: $brand-color-secondary-light;
 }
+
 
 /*=====  End of Styles  ======*/

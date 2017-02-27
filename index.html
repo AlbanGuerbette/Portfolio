@@ -33,22 +33,21 @@
       <header class="header">
         <h1 class="logo">LBN</h1>
 
-          <!-- <h1 class="nav--primary">MENU</h1> -->
-          <div class="menu-section">
-            <div class="menu-toggle">
-              <div class="one"></div>
-              <div class="two"></div>
-              <div class="three"></div>
-            </div>
-            <nav>
-              <ul role="navigation" class="hidden">
-                <li><a href="#">Présentation</a></li>
-                <li><a href="#">Projets</a></li>
-                <li><a href="#">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </nav>
+        <div class="menu-section">
+          <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
           </div>
+          <nav>
+            <ul role="navigation" class="hidden">
+              <li><a href="#">Présentation</a></li>
+              <li><a href="#">Projets</a></li>
+              <li><a href="#">CV</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
 
       </header>
       <div class="presentation">
@@ -66,10 +65,27 @@
       </svg>
     </div>
   </div>
+
   <div class="section section__projets">
-    <img src="public/assets/img/ena-accueil-laptop.png" alt="Site web d'Exell’Net Auto">
-    <img src="public/assets/img/ena-accueil-iphone.png" alt="Site web d'Exell’Net Auto">
+    <article class="projet__item">
+      <h1>Site web d’Exell’net Auto</h1>
+      <div class="projet__item__wrap">
+        <section class="project__row">
+          <img class="project__image--laptop" src="public/assets/img/ena-accueil-laptop.png" alt="Site web d'Exell’Net Auto" width="789" height="423">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reprehenderit dolor laboriosam, neque officiis
+            aspernatur blanditiis. Nam aspernatur harum voluptatem, quis alias, incidunt commodi sit tempora inventore vitae,
+            explicabo dolores.</p>
+        </section>
+        <section class="project__row">
+          <img class="project__image--iphone" src="public/assets/img/ena-accueil-iphone.png" alt="Site web d'Exell’Net Auto" width="130" height="270">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reprehenderit dolor laboriosam, neque officiis
+            aspernatur blanditiis. Nam aspernatur harum voluptatem, quis alias, incidunt commodi sit tempora inventore vitae,
+            explicabo dolores.</p>
+        </section>
+      </div>
+    </article>
   </div>
+
   <div class="section section__contact" id="contact">
     <form class="form" method="POST" action="https://formspree.io/aguerbette@gmail.com">
       <p class="input__wrapper">
@@ -90,11 +106,12 @@
       <input type="submit" value="Envoyer" class="btn btn--primary" />
     </form>
   </div>
+
+  <!-- JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="public/assets/js/main.min.js">
+  <script src="public/assets/js/main.min.js"></script>
+  <!-- End JavaScript -->
 
-
-  </script>
 </body>
 
 </html>
