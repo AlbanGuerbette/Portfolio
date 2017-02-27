@@ -39,7 +39,7 @@
   <div class="wrapper">
     <div class="section section__home">
       <header class="header">
-        <h1 class="logo">AG</h1>
+        <h1 class="logo">LOGO</h1>
 
         <div class="menu-section">
           <div class="menu-toggle">
@@ -59,8 +59,10 @@
 
       </header>
       <div id="presentation" class="presentation">
-        <h1>ALBAN GUERBETTE</h1>
-        <h2>Développeur front-end</h2>
+        <div class="presentation__header">
+          <h1>ALBAN GUERBETTE</h1>
+          <h2>Développeur front-end</h2>
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eaque fugiat molestias voluptatem, quibusdam laboriosam
           odio illum voluptatum ut, aliquid ab quae inventore doloribus reiciendis sit non beatae vero laudantium.
@@ -102,8 +104,8 @@
       <div class="codepen__wrap">
         <p data-height="800" data-theme-id="dark" data-slug-hash="BpaRPw" data-default-tab="result" data-user="albanguerbette" data-embed-version="2"
           data-pen-title="Wikipedia Viewer App FreeCodeCamp" data-preview="true" class="codepen">See the Pen
-          <a href="http://codepen.io/albanguerbette/pen/BpaRPw/">Wikipedia Viewer App FreeCodeCamp</a>
-          by Alban Guerbette (
+          <a href="http://codepen.io/albanguerbette/pen/BpaRPw/">Wikipedia Viewer App FreeCodeCamp</a> by Alban Guerbette
+          (
           <a href="http://codepen.io/albanguerbette">@albanguerbette</a>) on <a href="http://codepen.io">CodePen</a>.
         </p>
         <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -112,8 +114,8 @@
       <div class="codepen__wrap">
         <p data-height="800" data-theme-id="dark" data-slug-hash="GqqoZJ" data-default-tab="result" data-user="albanguerbette" data-embed-version="2"
           data-pen-title="Random Quote Machine Free Code Camp" data-preview="true" class="codepen">See the Pen
-          <a href="http://codepen.io/albanguerbette/pen/GqqoZJ/">Random Quote Machine Free Code Camp</a>
-          by Alban Guerbette (
+          <a href="http://codepen.io/albanguerbette/pen/GqqoZJ/">Random Quote Machine Free Code Camp</a> by Alban Guerbette
+          (
           <a href="http://codepen.io/albanguerbette">@albanguerbette</a>) on <a href="http://codepen.io">CodePen</a>.
         </p>
         <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -122,8 +124,8 @@
       <div class="codepen__wrap">
         <p data-height="800" data-theme-id="dark" data-slug-hash="YWGqdQ" data-default-tab="result" data-user="albanguerbette" data-embed-version="2"
           data-pen-title="Local Weather App Free Code Camp " data-preview="true" class="codepen">See the Pen
-          <a href="http://codepen.io/albanguerbette/pen/YWGqdQ/">Local Weather App Free Code Camp </a>
-          by Alban Guerbette (
+          <a href="http://codepen.io/albanguerbette/pen/YWGqdQ/">Local Weather App Free Code Camp </a> by Alban Guerbette
+          (
           <a href="http://codepen.io/albanguerbette">@albanguerbette</a>) on <a href="http://codepen.io">CodePen</a>.
         </p>
         <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -133,24 +135,28 @@
   </div>
 
   <div class="section section__contact" id="contact">
-    <form class="form" method="POST" action="https://formspree.io/aguerbette@gmail.com">
-      <p class="input__wrapper">
-        <label class="contact__label" for="name">Nom</label>
-        <input class="input contact__input" type="text" name="name" id="lastname" required/>
-        <span class="styled__label" data-text="Nom"></span>
-      </p>
-      <p class="input__wrapper">
-        <label class="contact__label" for="email">Email</label>
-        <input class="input contact__input" type="email" name="email" id="email" required/>
-        <span class="styled__label" data-text="Email"></span>
-      </p>
-      <p class="input__wrapper">
-        <label class="contact__label" for="message">Message</label>
-        <textarea class="input contact__input" name="message" id="message" cols="30" rows="5"></textarea>
-        <span class="styled__label" data-text="Message"></span>
-      </p>
-      <input type="submit" value="Envoyer" class="btn btn--primary" />
-    </form>
+    <p>Vous pouvez m’envoyer un mail <a href="mailto:aguerbette@gmail.com">aguerbette@gmail.com</a> ou utiliser le formulaire</p>
+    <div class="form__wrap">
+      <form class="form" method="POST" action="https://formspree.io/aguerbette@gmail.com">
+        <p class="input__wrapper">
+          <label class="contact__label" for="name">Nom</label>
+          <input class="input contact__input" type="text" name="name" id="lastname" required/>
+          <span class="styled__label" data-text="Nom"></span>
+        </p>
+        <p class="input__wrapper">
+          <label class="contact__label" for="email">Email</label>
+          <input class="input contact__input" type="email" name="email" id="email" required/>
+          <span class="styled__label" data-text="Email"></span>
+        </p>
+        <p class="input__wrapper">
+          <label class="contact__label" for="message">Message</label>
+          <textarea class="input contact__input" name="message" id="message" cols="30" rows="5"></textarea>
+          <span class="styled__label" data-text="Message"></span>
+        </p>
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="submit" value="Envoyer" class="btn btn--primary" />
+      </form>
+    </div>
   </div>
 
   <!-- JavaScript -->
