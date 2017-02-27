@@ -14,9 +14,10 @@
 }
 
 .section__home {
-  @include media('>large'){
-  display: flex;
+    display: flex;
   flex-direction: column;
+  @include media('>large'){
+
   justify-content: space-between;
 
   }
@@ -94,12 +95,11 @@
   max-width: 1024px;
   margin: 0 auto;
 }
-.section__contact {
+/* .form__wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-
+ */
 
 /*=====  End of Layout  ======*/
 
@@ -119,10 +119,10 @@ body {
 
 .wrapper {}
 
-.nav--primary,
 .logo {
   font-family: $code-font-stack;
   letter-spacing: 1.5px;
+  margin-left: 25px;
 }
 
 .header {
