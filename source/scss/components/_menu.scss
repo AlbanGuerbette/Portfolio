@@ -49,8 +49,10 @@ nav ul {
       width: 100%;
       display: block;
     }
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+    @include on-event() {
+      color: darken($brand-color-secondary-light, 20%);
+      background-color: darken($brand-color, 20%);
+      box-shadow: 5px 5px 20px $brand-gray;
     }
   }
 }
