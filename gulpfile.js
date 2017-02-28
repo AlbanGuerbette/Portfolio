@@ -1,13 +1,14 @@
 var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 gulp.task('browser-sync', function () {
   browserSync({
@@ -22,6 +23,10 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('styles', function () {
+  var plugins = [
+        autoprefixer({browsers: ['last 2 version']}),
+        cssnano()
+    ];
   gulp
     .src(['source/scss/**/*.scss'])
     .pipe(plumber({
@@ -31,10 +36,8 @@ gulp.task('styles', function () {
       }
     }))
     .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('public/assets/css/'))
+    .pipe(postcss(plugins))
     .pipe(rename({suffix: '.min'}))
-    .pipe(cleanCSS())
     .pipe(gulp.dest('public/assets/css/'))
     .pipe(browserSync.reload({stream: true}))
 });
