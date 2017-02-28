@@ -3,7 +3,6 @@ var gulp = require('gulp'),
   rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
