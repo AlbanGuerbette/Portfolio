@@ -12,4 +12,9 @@
 .btn--primary {
   color: $brand-color-secondary-light;
   background-color: $brand-color;
+  @include on-event() {
+    color: darken($brand-color-secondary-light, 20%);
+    background-color: darken($brand-color, 20%);
+    box-shadow: 5px 5px 20px $brand-gray;
+  }
 }
