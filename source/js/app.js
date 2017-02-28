@@ -14,8 +14,23 @@ $('.contact__input').each(function () {
     CheckFormInput($this)
   });
 });
-$(".menu-toggle").on('click', function() {
-  $(this).toggleClass("on");
-  $('.menu-section').toggleClass("on");
-  $("nav ul").toggleClass('hidden');
+
+
+// menu handling
+var fullpageMenu = $('#fullpage__menu');
+
+var menuToggle = function() {
+    $('.menu-section').toggleClass("on");
+    $(".menu-toggle").toggleClass("on");
+    fullpageMenu.toggleClass('hidden');
+}
+
+$(".menu-toggle").on('click', function () {
+  menuToggle();
+});
+
+$('.menu__item').on('click', function () {
+  if (!fullpageMenu.hasClass('hidden')) {
+    menuToggle();
+  }
 });
