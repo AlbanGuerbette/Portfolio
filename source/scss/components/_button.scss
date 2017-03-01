@@ -12,9 +12,10 @@
 .btn--primary {
   color: $brand-color-secondary-light;
   background-color: $brand-color;
+  transition: all 0.25s ease-out;
   @include on-event() {
-    color: darken($brand-color-secondary-light, 20%);
-    background-color: darken($brand-color, 20%);
+    color: darken($brand-color-secondary-light, 5%);
+    background-color: darken($brand-color, 5%);
     box-shadow: 5px 5px 20px $brand-gray;
   }
 }
