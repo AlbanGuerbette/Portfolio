@@ -24,7 +24,7 @@ gulp.task('bs-reload', function () {
 
 gulp.task('styles', function () {
   var plugins = [
-        autoprefixer({browsers: ['last 2 version']}),
+        autoprefixer({browsers: ['last 2 versions']}),
         cssnano()
     ];
   gulp
