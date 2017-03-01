@@ -39,7 +39,7 @@ nav ul {
     display: none;
   }
   a {
-    transition-duration: .25s;
+    transition: all 0.25s ease-out;
     @include on-event(self) {
       color: $brand-color-secondary-light;
       text-decoration: none;
@@ -49,8 +49,8 @@ nav ul {
       display: block;
     }
     @include on-event() {
-      color: darken($brand-color-secondary-light, 20%);
-      background-color: darken($brand-color, 20%);
+      color: darken($brand-color-secondary-light, 5%);
+      background-color: darken($brand-color, 5%);
       box-shadow: 5px 5px 20px $brand-gray;
     }
   }
