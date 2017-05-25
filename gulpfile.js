@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const babel = require('gulp-babel');
 
 gulp.task('browser-sync', () => {
   browserSync({
@@ -52,6 +53,7 @@ gulp.task('scripts', () =>
         },
       })
     )
+    .pipe(babel())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('public/assets/js/'))
     .pipe(rename({ suffix: '.min' }))
