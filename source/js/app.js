@@ -1,49 +1,48 @@
-function CheckFormInput($element) {
-  if ($element.val() === "") {
+function checkFormInput($element) {
+  if ($element.val() === '') {
     $element.closest('.input__wrapper').removeClass('inputNotEmpty');
   } else {
     $element.closest('.input__wrapper').addClass('inputNotEmpty');
   }
 }
 $('.contact__input').each(function () {
-  var $this = $(this);
-  $this.blur(function () {
-    CheckFormInput($this)
-  });
-  $this.keypress(function () {
-    CheckFormInput($this)
-  });
+  const $this = $(this);
+  $this.blur(() => checkFormInput($this));
+  $this.keypress(() => checkFormInput($this));
 });
-
 
 // menu handling
-var fullpageMenu = $('#fullpage__menu');
+const fullpageMenu = $('#fullpage__menu');
 
-var menuToggle = function() {
-    $('.menu-section').toggleClass("on");
-    $(".menu-toggle").toggleClass("on");
-    fullpageMenu.toggleClass('hidden');
-}
+const menuToggle = function () {
+  $('.menu-section').toggleClass('on');
+  $('.menu-toggle').toggleClass('on');
+  fullpageMenu.toggleClass('hidden');
+};
 
-$(".menu-toggle").on('click', function () {
-  menuToggle();
-});
+$('.menu-toggle').on('click', () => menuToggle());
 
-$('.menu__item').on('click', function () {
+$('.menu__item').on('click', () => {
   if (!fullpageMenu.hasClass('hidden')) {
     menuToggle();
   }
 });
 
-
 // Scroll handling a[href*=#]
-$('.bottom-arrow__link').on('click', function(e) {
+$('.bottom-arrow__link').on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 200, 'linear');
+  $('html, body').animate(
+    { scrollTop: $($(this).attr('href')).offset().top },
+    200,
+    'linear'
+  );
 });
 
-
-$('.menu__item').on('click', function(e) {
+$('.menu__item').on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 300, 'linear');
+  $('html, body').animate(
+    { scrollTop: $($(this).attr('href')).offset().top },
+    300,
+    'linear'
+  );
 });
