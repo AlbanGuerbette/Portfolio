@@ -52,10 +52,16 @@
 
 .project__wrap {
   display: flex;
+  flex-direction: column;
+  @include media('>large') {
+    flex-direction: row;
+  }
 }
 
 .project__description {
-  margin-left: 1em;
+  @include media('>large') {
+    margin-left: 1em;
+  }
 }
 
 .project__title {
@@ -69,7 +75,7 @@
 }
 
 .form__wrap {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 /*=====  End of Layout  ======*/
 
