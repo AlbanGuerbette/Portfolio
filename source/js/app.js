@@ -31,18 +31,10 @@ $('.menu__item').on('click', () => {
 // Scroll handling a[href*=#]
 $('.bottom-arrow__link').on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate(
-    { scrollTop: $($(this).attr('href')).offset().top },
-    200,
-    'linear'
-  );
+  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 200, 'linear');
 });
 
 $('.menu__item').on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate(
-    { scrollTop: $($(this).attr('href')).offset().top },
-    300,
-    'linear'
-  );
+  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 300, 'linear');
 });
