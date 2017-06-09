@@ -15,7 +15,9 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 /**
@@ -29,10 +31,9 @@ body {
   @include media('>=medium') {
     font-size: 1.25em;
   }
-    @include media('>=large') {
+  @include media('>=large') {
     font-size: 1.5em;
   }
-
 }
 
 /**
@@ -46,4 +47,8 @@ a {
     color: $link-hover-color;
     text-decoration: underline;
   }
+}
+
+h2 {
+  margin: 0.5em 0;
 }
